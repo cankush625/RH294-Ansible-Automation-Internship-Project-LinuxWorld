@@ -1,0 +1,21 @@
+---
+# tasks file for webserver
+
+- name: install httpd package
+  package:
+          name: "httpd"
+          state: present
+  when: ansible_distribution == "RedHat"
+  register: x
+
+- name: copy webpage to the server
+  template:
+          src: "/home/cankush/Documents/index.html"
+          dest: "/var/www/html/index.html"
+
+
+
+- name: start httpd service
+  service:
+          name: "httpd"
+          state: started
