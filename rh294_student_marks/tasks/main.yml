@@ -1,0 +1,8 @@
+---
+# tasks file for rh294_student_marks
+- debug:
+    msg: "{{x | predict_marks(gender, course_status)}}"
+
+- template:
+    src: "index.html.j2"
+    dest: "/home/cankush/Documents/index.html"

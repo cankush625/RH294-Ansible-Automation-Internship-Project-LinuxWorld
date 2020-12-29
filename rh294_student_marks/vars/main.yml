@@ -1,0 +1,5 @@
+---
+# vars file for rh294_student_marks
+x: 10
+gender: "male"
+course_status: "completed"
