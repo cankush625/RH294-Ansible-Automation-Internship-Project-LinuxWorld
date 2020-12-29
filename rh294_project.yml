@@ -1,0 +1,11 @@
+- hosts: localhost
+  roles:
+    - role: rh294_student_marks
+
+- hosts: rh294_loadbalancer
+  roles:
+    - role: haproxy1
+
+- hosts: rh294_project
+  roles:
+    - role: webserver1
